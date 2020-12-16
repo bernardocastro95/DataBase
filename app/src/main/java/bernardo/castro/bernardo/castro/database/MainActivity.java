@@ -2,6 +2,7 @@ package bernardo.castro.bernardo.castro.database;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,11 +21,14 @@ public class MainActivity extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+                Intent i = new Intent(MainActivity.this, Display.class);
+                startActivity(i);
+                /*FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = database.getReference("message");
 
                 myRef.setValue("Hello, World!");
-                Toast.makeText(getApplicationContext(), "Firebase Working", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Firebase Working", Toast.LENGTH_LONG).show();*/
             }
         });
     }
