@@ -29,6 +29,7 @@
         android:backgroundTint="@color/fabColor"
         android:layout_marginTop="600dp"
         android:layout_marginStart="350dp"
+        android:src="@drawable/add"
         />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/bernardoFabTest"
@@ -38,10 +39,8 @@
         android:layout_marginStart="350dp"
         app:fabSize="mini"
         android:visibility="invisible"
-        android:tint="@color/fabSecondaryColor"/>
-    <!--android:src="@drawable/test"-->
-
-    <!-- android:backgroundTint="@color/fabSecondaryColor"-->
+        android:tint="@color/fabSecondaryColor"
+        android:src="@drawable/test"/>
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -52,8 +51,8 @@
         android:layout_marginStart="350dp"
         app:fabSize="mini"
         android:visibility="invisible"
-        android:tint="@color/fabTertiaryColor"/>
-       <!-- android:src="@drawable/profile"-->
+        android:tint="@color/fabTertiaryColor"
+        android:src="@drawable/profile"/>
 
     <!--android:backgroundTint="@color/fabTertiaryColor"-->
 

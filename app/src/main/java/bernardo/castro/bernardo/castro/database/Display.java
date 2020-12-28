@@ -1,5 +1,6 @@
 package bernardo.castro.bernardo.castro.database;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -12,6 +13,8 @@ import android.view.View;
 
 public class Display extends AppCompatActivity {
 
+    boolean clicked;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,13 +22,31 @@ public class Display extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        final FloatingActionButton main = findViewById(R.id.fab);
+        final FloatingActionButton test = findViewById(R.id.bernardoFabTest);
+        final FloatingActionButton patient = findViewById(R.id.bernardoFabPatient);
+
+        main.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("RestrictedApi")
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                if(clicked){
+                    main.animate().rotation(45);
+                    test.setVisibility(View.VISIBLE);
+                    test.animate().translationY(-500);
+                    patient.setVisibility(View.VISIBLE);
+                    patient.animate().translationY(-300);
+                }
+                else {
+                    main.animate().rotation(0);
+                    test.animate().translationY(0);
+                    patient.animate().translationY(0);
+                    test.setVisibility(View.INVISIBLE);
+                    patient.setVisibility(View.INVISIBLE);
+                }
+                clicked = !clicked;
             }
         });
+
     }
 }
