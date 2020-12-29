@@ -8,8 +8,10 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.View;
+import android.widget.FrameLayout;
 
 public class Display extends AppCompatActivity {
 
@@ -21,6 +23,10 @@ public class Display extends AppCompatActivity {
         setContentView(R.layout.activity_display);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.add(R.id.display_fragment, new DisplayFragment());
+        ft.commit();
 
         final FloatingActionButton main = findViewById(R.id.fab);
         final FloatingActionButton test = findViewById(R.id.bernardoFabTest);
