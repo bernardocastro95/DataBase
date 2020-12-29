@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DataBase">
+        <activity android:name=".PatientActivity"></activity>
+        <activity android:name=".TestActivity" />
         <activity
             android:name=".Display"
             android:label="@string/title_activity_display"
-            android:theme="@style/Theme.DataBase.NoActionBar"></activity>
+            android:theme="@style/Theme.DataBase.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

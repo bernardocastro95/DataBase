@@ -1,6 +1,7 @@
 package bernardo.castro.bernardo.castro.database;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -42,6 +43,20 @@ public class Display extends AppCompatActivity {
                     test.animate().translationY(-500);
                     patient.setVisibility(View.VISIBLE);
                     patient.animate().translationY(-300);
+                    test.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(Display.this, TestActivity.class);
+                            startActivity(i);
+                        }
+                    });
+                    patient.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent i = new Intent(Display.this, PatientActivity.class);
+                            startActivity(i);
+                        }
+                    });
                 }
                 else {
                     main.animate().rotation(0);
@@ -53,6 +68,7 @@ public class Display extends AppCompatActivity {
                 clicked = !clicked;
             }
         });
+
 
     }
 }
