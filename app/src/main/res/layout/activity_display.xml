@@ -20,8 +20,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_display" />
-
 
     <FrameLayout
         android:id="@+id/display_fragment"
