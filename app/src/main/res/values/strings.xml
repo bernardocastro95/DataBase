@@ -11,4 +11,11 @@
     <string name="department">Department</string>
     <string name="add_patient">Add Patient</string>
 
+    <string-array name="departments">
+        <item>Toxicology</item>
+        <item>Infectology</item>
+        <item>Neuro</item>
+    </string-array>
+
+
 </resources>
