@@ -1,14 +1,28 @@
 package bernardo.castro.bernardo.castro.database.model;
 
 public class Patient {
+    private String id;
     private String name;
     private String lastName;
     private String department;
 
-    public Patient(String name, String lastName, String department){
+    public Patient(){
+
+    }
+
+    public Patient(String id, String name, String lastName, String department){
+        this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.department = department;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
